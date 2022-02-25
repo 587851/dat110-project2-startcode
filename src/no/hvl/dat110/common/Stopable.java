@@ -10,6 +10,7 @@ public abstract class Stopable extends Thread {
 	}
 	
 	public synchronized void doStop() {
+
 		stop = true;
 	}
 
@@ -21,7 +22,7 @@ public abstract class Stopable extends Thread {
 	public abstract void doProcess();
 	
 	public void run() {
-
+ 
 		Logger.log(name + " running");
 		
 		while (doCont()) {

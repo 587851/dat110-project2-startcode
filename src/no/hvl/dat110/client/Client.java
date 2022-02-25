@@ -16,7 +16,7 @@ public class Client extends Thread {
 	}
 
 	private void send(Message msg) {
-
+        
 		connection.send(MessageUtils.toTransportMessage(msg));
 
 	}
